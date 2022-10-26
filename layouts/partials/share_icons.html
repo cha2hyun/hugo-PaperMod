@@ -13,7 +13,12 @@
 {{- $ShareButtons := (.Param "ShareButtons")}}
 {{- with $ShareButtons }}{{ $custom = true }}{{ end }}
 
-<div class="share-buttons">
+
+<div style="padding-top:15px; padding-bottom:2px; font-size: x-large; font-weight: 700;">
+    Any Comments? 😀
+</div>
+<div class="share-buttons"></div>
+<!-- <div class="share-buttons">
     {{- if (cond ($custom) (in $ShareButtons "twitter") (true)) }}
     <a target="_blank" rel="noopener noreferrer" aria-label="share {{ $title | plainify }} on twitter"
         href="https://twitter.com/intent/tweet/?text={{ $title }}&amp;url={{ $pageurl }}&amp;hashtags={{- $.Scratch.Get "tags" -}}">
@@ -68,4 +73,14 @@
         </svg>
     </a>
     {{- end }}
-</div>
+</div> -->
+
+
+<script
+  src="https://utteranc.es/client.js"
+  repo="cha2hyun/blog-comments"
+  issue-term="title"
+  theme="boxy-light"
+  crossorigin="anonymous"
+  async
+></script>
